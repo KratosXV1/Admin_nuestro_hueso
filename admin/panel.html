@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel - Nuestro Hueso</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Panel administrador</h1>
+        <p class="subtitulo" id="saludoAdmin">Nuestro Hueso</p>
+    </header>
+
+    <nav class="links">
+        <a href="#" id="tabProductos" class="activo">Productos</a>
+        <a href="#" id="tabUsuarios">Usuarios</a>
+        <a href="../pets/productos.html" target="_blank">Ver tienda</a>
+        <button type="button" id="btnCerrar">Cerrar sesión</button>
+    </nav>
+
+    <main>
+        <section id="vistaProductos">
+            <h2>Productos y precios</h2>
+            <div class="grid-panel">
+                <form id="formProducto" novalidate>
+                    <input type="hidden" id="productoId">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" maxlength="80" required>
+                    <p class="error" id="errorNombre"></p>
+
+                    <label for="precio">Precio (CLP)</label>
+                    <input type="number" id="precio" min="1" step="1" required>
+                    <p class="error" id="errorPrecio"></p>
+
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" maxlength="300" required></textarea>
+                    <p class="error" id="errorDescripcion"></p>
+
+                    <label for="imagen">Imagen (ruta de la tienda, ej: img/snack.png)</label>
+                    <input type="text" id="imagen" maxlength="200" placeholder="img/snack.png">
+                    <p class="error" id="errorImagen"></p>
+
+                    <div class="acciones-form">
+                        <button type="submit" class="boton" id="btnGuardar">Agregar producto</button>
+                        <button type="button" class="boton-secundario" id="btnCancelar">Cancelar</button>
+                    </div>
+                </form>
+
+                <div class="tabla-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoProductos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="vistaUsuarios" class="oculto">
+            <h2>Usuarios registrados</h2>
+            <div class="tabla-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>RUN</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Región</th>
+                            <th>Comuna</th>
+                            <th>Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoUsuarios"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Los cambios se guardan en el mismo catálogo de la tienda</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/panel.js"></script>
+</body>
+</html>

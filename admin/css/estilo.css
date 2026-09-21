@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d99090;
+    font-family: Arial, sans-serif;
+    color: #222222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #d97a7a;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 2px solid #b85c5c;
+}
+
+.titulo {
+    font-family: cursive;
+    font-size: 28px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.subtitulo {
+    color: #faeeee;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 10px;
+}
+
+.links a,
+.links button {
+    background-color: #efcccc;
+    color: #000000;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 16px;
+    padding: 10px 18px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.links a.activo,
+.links a:hover,
+.links button:hover {
+    background-color: #f7dede;
+}
+
+.links button {
+    font-family: cursive;
+}
+
+main {
+    flex: 1;
+    width: 94%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-family: cursive;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.aviso {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+form {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    background-color: #efcccc;
+    padding: 25px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+.error {
+    color: #b30000;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 16px;
+}
+
+.acciones-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.boton,
+.boton-secundario {
+    background-color: #0508a8;
+    color: #ffffff;
+    padding: 10px 18px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-secundario {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.boton:hover {
+    background-color: #040685;
+}
+
+.grid-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.oculto {
+    display: none;
+}
+
+.tabla-wrap {
+    overflow-x: auto;
+    background-color: #efcccc;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #c9a0a0;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #d97a7a;
+    color: #ffffff;
+}
+
+.precio-celda {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.mini {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.fila-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.fila-botones button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    background: #fff;
+}
+
+.fila-botones .peligro {
+    background: #b30000;
+    color: #fff;
+}
+
+.vacio {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #d97a7a;
+    color: #faeeee;
+    font-family: cursive;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 2px solid #b85c5c;
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .grid-panel {
+        grid-template-columns: 1fr;
+    }
+}
